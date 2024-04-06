@@ -122,3 +122,116 @@ cursor: pointer;
     background: #26262F;
    
 }
+.foot{
+    display: flex;
+width: 100%;
+padding: 16px 10px;
+justify-content: space-between;
+align-items: center;
+border-top: 1px solid rgba(136, 136, 136, 0.20);
+}
+.inputAttach{
+    display: flex;
+width: 60%;
+justify-content: center;
+align-items: center;
+gap: 8px;
+flex-shrink: 0;
+}
+.inputAttach textarea{
+    color: var(--Symentic-Gray-100, #8B8B8B);
+    background-color: transparent;
+    border: none;
+    height: 20px;
+/* Body/Regular-14 */
+font-family: "DM Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+resize: none;
+
+}
+.emojiMicSend{
+    display: flex;
+justify-content: center;
+align-items: center;
+gap: 16px;
+}
+.emojiMicSend svg:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+.messages{
+    padding: 10px;
+    height: 64vh;
+    overflow-y: scroll;
+    
+}
+.receiveMsg{
+    display: flex;
+max-width: 80%;
+padding: 8px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 10px;
+border-radius: 10px 10px 10px 0px;
+border: 1px solid var(--Symentic-Gray-20, #343434);
+}
+.receiveMsgCover{
+    width: 100%;
+    display: inline-flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 4px;
+}
+.sendMsgCover{
+    display: inline-flex;
+width: 100%;
+flex-direction: column;
+align-items: flex-end;
+gap: 4px;
+}
+.sendMsg{
+    display: flex;
+max-width: 80%;
+max-width: 321px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 10px 10px 0px 10px;
+background: #FFF;
+}
+.receiveMsg p{
+    align-self: stretch;
+    color: #FFF;
+
+/* Body/Regular-14 */
+font-family: "DM Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.sendMsg p{
+    align-self: stretch;
+    color: #000;
+
+/* Body/Regular-14 */
+font-family: "DM Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.time{
+    color: var(--Symentic-Gray-100, #8B8B8B);
+font-family: "DM Sans";
+font-size: 8px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}

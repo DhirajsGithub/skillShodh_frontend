@@ -1,16 +1,36 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Messaging.module.css";
 
-const Contact = ({ name, img, lastMessage, isActive }) => {
+const Contact = ({ name, img, lastMessage, isActive, setUserHandler, id }) => {
   return (
     <div
+      onClick={() => setUserHandler({ name, img, lastMessage, isActive, id })}
       style={{ backgroundColor: isActive && "#28282D" }}
       className={classes.contactCover}
     >
       <div className={classes.contact}>
         <div className={classes.imgInfo}>
-          <div className={classes.img}>
+          <div style={{ position: "relative" }} className={classes.img}>
             <img src={img} alt="" />
+            {isActive && (
+              <svg
+                style={{ position: "absolute", left: "28px", bottom: "-1px" }}
+                xmlns="http://www.w3.org/2000/svg"
+                width="8"
+                height="8"
+                viewBox="0 0 8 8"
+                fill="none"
+              >
+                <circle
+                  cx="4"
+                  cy="4"
+                  r="3"
+                  fill="white"
+                  stroke="#23AD00"
+                  strokeWidth="2"
+                />
+              </svg>
+            )}
           </div>
           <div className={classes.info}>
             <h1>{name}</h1>
@@ -34,7 +54,7 @@ const Contact = ({ name, img, lastMessage, isActive }) => {
   );
 };
 
-const Messaging = () => {
+const Messaging = ({ setUserHandler }) => {
   const [search, setSearch] = useState("");
   const contacts = [
     {
@@ -129,6 +149,8 @@ const Messaging = () => {
         {filteredContacts.map((contact, index) => {
           return (
             <Contact
+              id={contact.id}
+              setUserHandler={setUserHandler}
               key={index}
               name={contact.name}
               img={contact.img}
